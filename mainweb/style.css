@@ -1,0 +1,655 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #05090f;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center;
+}
+
+/* Profil Container - Menggunakan Flexbox untuk menyusun profil secara horizontal */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap; /* Menyusun profil dalam baris baru jika ruang tidak cukup */
+    justify-content: flex-start; /* Menyusun elemen dari kiri ke kanan */
+    gap: 20px; /* Memberikan jarak antar profil */
+    margin-bottom: 40px;
+}
+
+/* Setiap profil */
+.profile {
+    background-color: #000000;
+    border-radius: 8px;
+    border: 1px solid #dbdbdb; /* Border yang mirip dengan Instagram */
+    padding: 20px;
+    width: 300px; /* Tentukan lebar profil */
+    text-align: center;
+    box-sizing: border-box; /* Memastikan padding tidak mempengaruhi ukuran */
+}
+
+/* Profil Header */
+.profile-header {
+    background-image: url('../images/discord2.png');
+    background-size: 100% 130px;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Gaya untuk gambar profil */
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #7289da;
+}
+
+/* Nama pengguna */
+.username {
+    font-size: 24px;
+    margin: 10px 0 5px;
+}
+
+/* Tagline */
+.tagline {
+    font-size: 14px;
+    color: #b7cbd8;
+}
+
+/* Tagline */
+.tagline2 {
+    text-align: left;
+    font-size: auto;
+    color: #b7cbd8;
+}
+
+/* Kontainer emoji */
+.emoji-container {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #b1b1b1;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.emoji-container a {
+    margin: 0 3px;
+}
+
+/* Konten profil discord*/
+.profile-content {
+    text-align: left;
+}
+
+/* Informasi keanggotaan */
+.membership-info {
+    text-align: left;
+    margin-top: 15px;
+    color: #b7cbd8;
+}
+
+.membership-info p {
+    margin: 5px 0;
+}
+
+.membership-info p:first-child {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.membership-info p.date {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.membership-info p.connection {
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Styling untuk discordcom */
+.discordcom {
+    font-size: medium;
+    text-align: center;
+    color: #ff0000; /* Merah khas Discord */
+}
+
+.discordcom button {
+    background-color: #7289da; /* Warna biru khas Discord */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.discordcom button:hover {
+    background-color: #5b6eae; /* Warna biru gelap saat hover */
+}
+
+.discordcom button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Gaya untuk Additional Information */
+.additional-info {
+    background-color: #000000;
+    border-radius: 0px; /* Menghilangkan border-radius agar menempel pada kiri-kanan */
+    padding: 20px;
+    width: 100%;  /* Mengatur lebar menjadi 100% (full-width) */
+    margin: 0;  /* Menghapus margin agar menempel di tepi layar */
+    color: white;
+    text-align: center;
+    box-sizing: border-box; /* Agar padding tidak mengubah ukuran lebar */
+    position: relative; /* Menjamin bahwa elemen akan berada di posisi normal */
+    left: 0;
+    right: 0;
+    top: 20px;  /* Optional: Anda bisa menyesuaikan jarak atas agar lebih rapi */
+}
+
+/* Menambahkan gaya untuk heading dan paragraf */
+.additional-info h2 {
+    font-size: 24px;
+    color: #b7cbd8;
+    margin-bottom: 10px;
+}
+
+.additional-info p {
+    font-size: 16px;
+    color: #ccc;
+    margin: 0;
+}
+
+
+
+
+/* Gaya untuk Profil Instagram */
+.instagram-profile {
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Tentukan lebar profil */
+    text-align: center;
+    box-sizing: border-box; /* Memastikan padding tidak mempengaruhi ukuran */
+    border: 1px solid #dbdbdb; /* Border yang mirip dengan Instagram */
+}
+
+/* Profil Header Instagram */
+.instagram-profile .profile-header {
+    background-image: url('images/instagram-header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Konten profil instagram*/
+.profile-content2 {
+    text-align: center;
+}
+
+/* Gaya untuk gambar profil Instagram */
+.instagram-profile .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #dbdbdb;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+/* Nama pengguna Instagram */
+.instagram-profile .username {
+    font-size: 24px;
+    margin-top: 140px;
+    font-weight: bold;
+    color: #262626;
+}
+
+/* Tagline (username Instagram) */
+.instagram-profile .tagline {
+    font-size: 16px;
+    color: #8e8e8e;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk bagian Bio */
+.instagram-profile .bio {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #8e8e8e;
+    text-align: center;
+}
+
+/* Styling untuk Stats */
+.instagram-profile .stats {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #262626;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar stat */
+}
+
+.instagram-profile .stat {
+    font-weight: bold;
+}
+
+.instagram-profile .stat span {
+    color: #3897f0; /* Biru Instagram */
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+
+/* Informasi keanggotaan */
+.instagram-profile .membership-info {
+    text-align: left;
+    margin-top: 15px;
+    color: #262626;
+}
+
+.instagram-profile .membership-info p {
+    margin: 5px 0;
+}
+
+.instagram-profile .membership-info p:first-child {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.instagram-profile .membership-info p.date {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Tombol Instagram */
+.instagram-profile .instagramcom {
+    font-size: medium;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.instagram-profile button {
+    background-color: #3897f0; /* Warna biru khas Instagram */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.instagramcom button:hover {
+    background-color: #2a75d4; /* Warna biru gelap saat hover */
+}
+
+.instagramcom button a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+/* Gaya untuk Profil TikTok */
+.tiktok-profile {
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Tentukan lebar profil */
+    text-align: center;
+    box-sizing: border-box; /* Memastikan padding tidak mempengaruhi ukuran */
+    border: 1px solid #dbdbdb; /* Border yang mirip dengan Instagram */
+}
+
+/* Profil Header TikTok */
+.tiktok-profile .profile-header {
+    background-image: url('images/tiktok-header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Gaya untuk gambar profil TikTok */
+.tiktok-profile .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #dbdbdb;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+/* Nama pengguna TikTok */
+.tiktok-profile .username {
+    font-size: 24px;
+    margin-top: 140px;
+    font-weight: bold;
+    color: #262626;
+}
+
+/* Tagline (username TikTok) */
+.tiktok-profile .tagline {
+    font-size: 16px;
+    color: #8e8e8e;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk bagian Bio */
+.tiktok-profile .bio {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #8e8e8e;
+    text-align: center;
+}
+
+/* Styling untuk Stats */
+.tiktok-profile .stats {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #262626;
+    display: flex;
+    justify-content: space-between; /* Membuat jarak antar stat */
+    gap: 15px; /* Menambahkan jarak antar elemen stat */
+    font-weight: bold;
+}
+
+.tiktok-profile .stat {
+    display: inline-block;
+    text-align: center;
+}
+
+.tiktok-profile .stat span {
+    color: #fe2c55; /* Warna merah khas TikTok */
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* Tombol TikTok */
+.tiktok-profile .tiktokcom {
+    font-size: medium;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tiktok-profile button {
+    background-color: #fe2c55; /* Warna merah khas TikTok */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.tiktok-profile button:hover {
+    background-color: #e0133b; /* Warna merah gelap saat hover */
+}
+
+.tiktok-profile button a {
+    color: white;
+    text-decoration: none;
+}
+
+.tiktok-profile button#followActionButton {
+    background-color: #333;
+    font-weight: bold;
+}
+
+.tiktok-profile button#followActionButton:hover {
+    background-color: #555;
+}
+
+
+
+/* Gaya untuk Profil Steam */
+.steam-profile {
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Tentukan lebar profil */
+    text-align: center;
+    box-sizing: border-box; /* Memastikan padding tidak mempengaruhi ukuran */
+    border: 1px solid #dbdbdb; /* Border yang mirip dengan Steam */
+}
+
+/* Profil Header Steam */
+.steam-profile .profile-header {
+    background-image: url('images/steam-header.png'); /* Anda bisa mengganti dengan gambar header Steam */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Gaya untuk gambar profil Steam */
+.steam-profile .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 5%;
+    border: 2px solid #dbdbdb;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+/* Nama pengguna Steam */
+.steam-profile .username {
+    font-size: 24px;
+    margin-top: 140px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Tagline (username Steam) */
+.steam-profile .tagline {
+    font-size: 16px;
+    color: #8e8e8e;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk bagian Bio */
+.steam-profile .bio {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #8e8e8e;
+    text-align: center;
+}
+
+/* Styling untuk Stats */
+.steam-profile .stats {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar stat */
+}
+
+.steam-profile .stat {
+    font-weight: bold;
+}
+
+.steam-profile .stat span {
+    color: #3b5998; /* Biru khas Steam */
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* Tombol Steam */
+.steam-profile .steamcom {
+    font-size: medium;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.steam-profile button {
+    background-color: #171a21; /* Warna gelap khas Steam */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.steam-profile button:hover {
+    background-color: #3b5998; /* Biru khas Steam saat hover */
+}
+
+.steam-profile button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Gaya untuk Profil GitHub */
+.github-profile {
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Tentukan lebar profil */
+    text-align: center;
+    box-sizing: border-box; /* Memastikan padding tidak mempengaruhi ukuran */
+    border: 1px solid #dbdbdb; /* Border yang mirip dengan GitHub */
+}
+
+/* Profil Header GitHub */
+.github-profile .profile-header {
+    background-image: url('images/steam-header.png'); /* Anda bisa mengganti dengan gambar header Steam */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Gaya untuk gambar profil GitHub */
+.github-profile .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+/* Nama pengguna GitHub */
+.github-profile .username {
+    font-size: 24px;
+    margin-top: 140px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Tagline (username GitHub) */
+.github-profile .tagline {
+    font-size: 16px;
+    color: #8e8e8e;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk bagian Bio */
+.github-profile .bio {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #8e8e8e;
+    text-align: center;
+}
+
+/* Styling untuk Stats */
+.github-profile .stats {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar stat */
+}
+
+.github-profile .stat {
+    font-weight: bold;
+}
+
+.github-profile .stat span {
+    color: #0366d6; /* Biru khas GitHub */
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* Tombol GitHub */
+.github-profile .githubcom {
+    font-size: medium;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.github-profile button {
+    background-color: #24292f; /* Warna gelap khas GitHub */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.github-profile button:hover {
+    background-color: #3c444d; /* Warna abu-abu gelap saat hover */
+}
+
+.github-profile button a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* Button Styling */
+button {
+    background-color: #7289da;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5b6eae;
+}
