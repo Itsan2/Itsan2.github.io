@@ -1,0 +1,312 @@
+/* Reset dan Box Sizing */
+* {
+    box-sizing: border-box; /* Mengatur box-sizing untuk semua elemen */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-20deg, #ffffff, #000000);
+    color: white;
+    margin: 0; /* Hapus margin default */
+    padding: 0; /* Hapus padding default */
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000000; /* Dark background for the navbar */
+    padding: 10px 20px; /* Padding for the navbar */
+    width: 100%;
+}
+
+
+.navbar-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left links, logo, and right links */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for the navbar */
+    padding: 0 20px; /* Padding on the sides */
+    margin: 0 auto; /* Center the navbar */
+    width: 100%; /* Full width */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Space between links */
+}
+
+.nav-links.left {
+    flex: 1; /* Allow left links to take space */
+    justify-content: flex-start; /* Align left links to the start */
+    margin-left: -40px;
+}
+
+.nav-links.right {
+    flex: 1; /* Allow right links to take space */
+    justify-content: flex-end; /* Align right links to the end */
+}
+
+.logo {
+    text-align: center; /* Center the logo text */
+    margin-left: 25px;
+}
+
+.logo h1 {
+    color: white; /* Logo text color */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Padding for links */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.nav-links a:hover {
+    background-color: #555; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center; /* Center links */
+    }
+}
+
+
+
+
+
+
+/* About Section Styles */
+.about-section {
+    text-align: center;
+    max-width: 1200px; /* Max width for the about section */
+    margin: 20px auto; /* Center the section */
+    padding: 20px; /* Padding for the section */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    border: 5px solid #000000; /* Border yang mirip dengan Instagram */
+}
+
+.about-section h2 {
+    text-align: center; /* Center the section title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.profile {
+    text-align: center; /* Center text for profile */
+    margin: 20px 0; /* Margin above and below */
+}
+
+.profile-image {
+    width: 150px; /* Set a fixed width for profile image */
+    height: 150px; /* Set a fixed height for profile image */
+    border-radius: 50%; /* Make image circular */
+    border: 2px solid #411fbb; /* Optional: border around the image */
+}
+
+.skills {
+    margin-top: 20px; /* Space above skills section */
+}
+
+.skills ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.skills li {
+    margin: 5px 0; /* Space between list items */
+    text-align: center; /* Center text */
+}
+
+.vision {
+    margin-top: 20px; /* Space above vision and mission */
+    text-align: center; /* Center text */
+}
+
+
+
+
+/* 3D Skill Bar Section */
+.three-d-skill-bar-section {
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%; /* Full width */
+    margin: 20px 0; /* Margin for spacing */
+    color: white;
+    text-align: center;
+}
+
+.three-d-skill-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255,);
+}
+
+/* Skill Icon Styles */
+.skill {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    width: 80%; /* Default width of the skill bar */
+    margin: 10px 0;
+    position: relative;
+}
+
+.skill-icon {
+    margin-right: 10px; /* Space between icon and skill bar */
+}
+
+.skill-icon img {
+    width: 24px; /* Set a fixed width for icons */
+    height: 24px; /* Set a fixed height for icons */
+}
+
+.bar {
+    background-color: #444; /* Background of the bar */
+    border-radius: 5px;
+    height: 30px; /* Height of the bar */
+    overflow: hidden; /* Hide overflow for smooth effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.5s ease; /* Animation for depth effect */
+    flex-grow: 1; /* Allow the bar to take remaining space */
+}
+
+.fill {
+    background: linear-gradient(90deg, #7289da, #ff0000); /* Gradient for fill */
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease; /* Animation for filling */
+}
+
+.skill-name {
+    position: absolute;
+    left: +50px;
+    top: 5px;
+    font-size: 14px;
+    font-weight: bold; /* Bold text for skill names */
+}
+
+.percentage {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 14px; /* Font size for percentage */
+}
+
+/* 3D Effect on Hover */
+.skill:hover .bar {
+    transform: translateY(-5px); /* Lift the bar on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .skill {
+        width: 90%; /* Increase width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .skill {
+        width: 95%; /* Full width on mobile devices */
+    }
+
+    .skill-name, .percentage {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Luxurious Footer Styles */
+.luxury-footer {
+    background-color: #000000; /* Dark background for the footer */
+    color: white; /* Text color */
+    width: 100%; /* Full width */
+    padding: 20px 0; /* Padding for the footer */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    position: relative; /* Ensure it is positioned in the normal flow */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space between sections */
+    max-width: 1200px; /* Max width for the footer content */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+.footer-section {
+    flex: 1; /* Allow sections to take equal space */
+    margin: 0 10px; /* Margin between sections */
+}
+
+.footer-section h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.5em; /* Font size for section headings */
+}
+
+.footer-section p {
+    font-size: 0.9em; /* Font size for paragraph text */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-section ul li {
+    margin: 5px 0; /* Space between list items */
+}
+
+.footer-section a {
+    color: #4CAF50; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-bottom {
+    text-align: center; /* Center text in the bottom section */
+    margin-top: 10px; /* Space above the bottom text */
+    font-size: 1em; /* Font size for copyright text */
+}
+
+
+/* Button Styling */
+button {
+    background-color: #7289da;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5b6eae;
+}
