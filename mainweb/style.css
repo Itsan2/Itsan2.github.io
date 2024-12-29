@@ -1,21 +1,95 @@
+* {
+    box-sizing: border-box; /* Mengatur box-sizing untuk semua elemen */
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #05090f;
+    background: linear-gradient(400deg, #ffffff, #000000);
     color: white;
-    margin: 0;
-    padding: 20px;
+    margin: 0; /* Hapus margin default */
+    padding: 0; /* Hapus padding default */
     display: flex;
     flex-direction: column; /* Menyusun elemen secara vertikal */
     align-items: center;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000000; /* Dark background for the navbar */
+    padding: 10px 20px; /* Padding for the navbar */
+    width: 100%;
+}
+
+
+.navbar-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left links, logo, and right links */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for the navbar */
+    padding: 0 20px; /* Padding on the sides */
+    margin: 0 auto; /* Center the navbar */
+    width: 100%; /* Full width */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Space between links */
+}
+
+.nav-links.left {
+    flex: 1; /* Allow left links to take space */
+    justify-content: flex-start; /* Align left links to the start */
+    margin-left: -40px;
+}
+
+.nav-links.right {
+    flex: 1; /* Allow right links to take space */
+    justify-content: flex-end; /* Align right links to the end */
+}
+
+.logo {
+    text-align: center; /* Center the logo text */
+    margin-left: 25px;
+}
+
+.logo h1 {
+    color: white; /* Logo text color */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Padding for links */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.nav-links a:hover {
+    background-color: #555; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center; /* Center links */
+    }
 }
 
 /* Profil Container - Menggunakan Flexbox untuk menyusun profil secara horizontal */
 .profile-container {
     display: flex;
     flex-wrap: wrap; /* Menyusun profil dalam baris baru jika ruang tidak cukup */
-    justify-content: flex-start; /* Menyusun elemen dari kiri ke kanan */
+    justify-content: center; /* Menyusun elemen dari kiri ke kanan */
     gap: 20px; /* Memberikan jarak antar profil */
     margin-bottom: 40px;
+    margin-top: 35px; /* Jarak atas untuk memberi ruang antara navbar dan profil */
 }
 
 /* Setiap profil */
@@ -138,38 +212,6 @@ body {
     color: white;
     text-decoration: none;
 }
-
-/* Gaya untuk Additional Information */
-.additional-info {
-    background-color: #000000;
-    border-radius: 0px; /* Menghilangkan border-radius agar menempel pada kiri-kanan */
-    padding: 20px;
-    width: 100%;  /* Mengatur lebar menjadi 100% (full-width) */
-    margin: 0;  /* Menghapus margin agar menempel di tepi layar */
-    color: white;
-    text-align: center;
-    box-sizing: border-box; /* Agar padding tidak mengubah ukuran lebar */
-    position: relative; /* Menjamin bahwa elemen akan berada di posisi normal */
-    left: 0;
-    right: 0;
-    top: 20px;  /* Optional: Anda bisa menyesuaikan jarak atas agar lebih rapi */
-}
-
-/* Menambahkan gaya untuk heading dan paragraf */
-.additional-info h2 {
-    font-size: 24px;
-    color: #b7cbd8;
-    margin-bottom: 10px;
-}
-
-.additional-info p {
-    font-size: 16px;
-    color: #ccc;
-    margin: 0;
-}
-
-
-
 
 /* Gaya untuk Profil Instagram */
 .instagram-profile {
@@ -638,7 +680,106 @@ body {
     text-decoration: none;
 }
 
+/* Gaya untuk Additional Information */
+.additional-info {
+    background-color: #000000;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    width: 100%;  /* Mengatur lebar menjadi 100% (full-width) */
+    margin: 0;  /* Menghapus margin agar menempel di tepi layar */
+    color: white;
+    text-align: center;
+    box-sizing: border-box; /* Agar padding tidak mengubah ukuran lebar */
+    position: relative; /* Menjamin bahwa elemen akan berada di posisi normal */
+    left: 0;
+    right: 0;
+    top: 10px;  /* Optional: Anda bisa menyesuaikan jarak atas agar lebih rapi */
+}
 
+/* Menambahkan gaya untuk heading dan paragraf */
+.additional-info h2 {
+    font-size: 24px;
+    color: #b7cbd8;
+    margin-bottom: 10px;
+}
+
+.additional-info p {
+    font-size: 16px;
+    color: #ccc;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Luxurious Sticky Footer */
+.luxury-footer {
+    background-color: #000000; /* Warna latar belakang footer */
+    color: white; /* Warna teks */
+    width: 100%; /* Mengatur lebar footer menjadi 100% */
+    padding: 20px 0; /* Padding atas dan bawah */
+    position: relative; /* Menetapkan posisi footer relatif */
+    bottom: -110px; /* Menempatkan footer di bagian bawah */
+    left: 0; /* Menempatkan footer di kiri */
+    right: 0; /* Menempatkan footer di kanan */
+}
+
+.footer-content {
+    display: flex; /* Menggunakan flexbox untuk layout */
+    justify-content: space-around; /* Ruang antar bagian */
+    max-width: 1200px; /* Lebar maksimum untuk konten footer */
+    margin: 0 auto; /* Memusatkan konten */
+    padding: 0 20px; /* Padding samping */
+}
+
+.footer-section {
+    flex: 1; /* Membuat setiap bagian mengambil ruang yang sama */
+    margin: 0 10px; /* Margin antar bagian */
+}
+
+.footer-section h2 {
+    margin-bottom: 10px; /* Jarak bawah untuk heading */
+    font-size: 1.5em; /* Ukuran font untuk heading */
+}
+
+.footer-section p {
+    font-size: 0.9em; /* Ukuran font untuk paragraf */
+}
+
+.footer-section ul {
+    list-style: none; /* Menghapus bullet points */
+    padding: 0; /* Menghapus padding */
+}
+
+.footer-section ul li {
+    margin: 5px 0; /* Jarak antar item list */
+}
+
+.footer-section a {
+    color: #4CAF50; /* Warna tautan */
+    text-decoration: none; /* Menghapus garis bawah */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+.footer-bottom {
+    text-align: center; /* Menyelaraskan teks di tengah */
+    margin-top: 10px; /* Jarak atas untuk teks bawah */
+    font-size: 1em; /* Ukuran font untuk teks copyright */
+}
 
 /* Button Styling */
 button {
