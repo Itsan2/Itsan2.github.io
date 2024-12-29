@@ -70,17 +70,15 @@ body {
         bottom: 2%;
       }
     50% {
-      bottom: 3%;
+      bottom: 1%;
     }
     75% {
-        bottom: 4%;
+        bottom: 1%;
       }
-    }
     100% {
-        bottom: 5%;
+        bottom: 1%;
       }
     }
-  }
   
   /* Cloud container styles and animation */
   .clouds-container {
@@ -110,8 +108,6 @@ body {
     right: 10px;
     top: 10px;
     width: 50px;
-    z-index: 999;
-    animation: rotate-360 3s infinite linear;
   }
   
   @keyframes rotate-360 {
@@ -150,8 +146,3 @@ body {
       width: 100%;
     }
   }
-
-  // Redirect to the main page after 3 seconds
-setTimeout(function () {
-    window.location.href = 'mainweb/'; // Redirect to the main page (index.php or index.html)
-}, 10000); // 3 seconds delay
