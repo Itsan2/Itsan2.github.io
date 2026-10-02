@@ -1,0 +1,46 @@
+/**
+ * DESIGN TOKENS
+ * Sesuai DESIGN.md §1–§3 dan MOTION.md §1 & §7
+ */
+:root {
+  /* 1. Color tokens (DESIGN.md §1) */
+  --color-text: #333333;
+  --color-background: #f6f6f6;
+  --color-white: #ffffff;
+  --color-beige-1: #D9D4D4;
+  --color-beige-2: #e3d3d3;
+  --color-beige-3: #afa3a3;
+  --color-blue-1: #609aae; /* brand, first-paint & loading bg */
+  --color-blue-hover: #598ea1;
+  --color-gray-1: #ededed;
+  --color-fb: #396fed;
+  --color-x: #000000;
+  --color-share: #5f717f;
+  --color-red: #e20013;
+
+  /* 2. Typography (DESIGN.md §2) */
+  --font-ttl: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* 3. Grid & Layout (DESIGN.md §3) */
+  --scrollbar-width: 15px;
+  --window-width: calc(100vw - var(--scrollbar-width));
+  --grid-outer: 4rem;        /* PC */
+  --grid-outer-sp: 1.5rem;   /* SP */
+  --grid-gap: 4rem;
+  --four-column-grid: calc(((var(--window-width) - var(--grid-outer) * 2) - var(--grid-gap) * 3) / 4);
+  --five-column-grid: calc(((var(--window-width) - var(--grid-outer) * 2) - var(--grid-gap) * 4) / 5);
+  --five-column-grid--liquid: calc((100% - var(--grid-gap) * 4) / 5);
+  --height-header-pc: 10rem;
+  --js-clientWidth: 100vw;
+  --width-grid-col5: calc((var(--js-clientWidth) - 4rem * 6) / 5);
+  --width-grid-col3-sp: calc((var(--js-clientWidth) - 1.5rem * 4) / 3);
+
+  /* Transitions & Animation Easings */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-out-power2: cubic-bezier(0.25, 1, 0.5, 1);
+  --duration-scene1: 750ms;
+  --duration-overlap: 600ms;
+  --duration-exit: 800ms;
+}

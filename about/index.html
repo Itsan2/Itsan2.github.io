@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — M. Ichsan Riantono | Engineering &amp; Creative Studio</title>
+  <meta name="description"
+    content="Learn more about M. Ichsan Riantono — Industrial Engineering graduate blending technical logic, full-stack web development, precise 3D modeling, and cinematic video production.">
+  <link rel="canonical" href="https://portfolio.ichsanriantono.dev/about/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About — M. Ichsan Riantono">
+  <meta property="og:description"
+    content="Industrial Engineering graduate blending technical logic with visual creativity across full-stack development, 3D modeling, and AI engineering.">
+  <meta property="og:type" content="profile">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Inline Anti-FOUC & Viewport Calculation -->
+  <style>
+    :root {
+      --js-clientWidth: 100vw;
+    }
+
+    html.is-history-navigation .p-loading {
+      display: none !important;
+    }
+  </style>
+
+  <!-- Progressive Enhancement Fallback (AGENTS.md & PRD §6) -->
+  <noscript>
+    <style>
+      .p-loading {
+        display: none !important;
+      }
+
+      [data-line-reveal],
+      [data-image-reveal],
+      [data-section-parallax] {
+        opacity: 1 !important;
+        transform: none !important;
+        clip-path: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Typography: Google Fonts (Inter + Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/sections.css">
+</head>
+
+<body>
+  <!-- 0. Loading Overlay (MOTION.md §1) -->
+  <div class="p-loading" aria-hidden="true">
+    <div class="p-loading__curtain"></div>
+    <div class="p-loading__content">
+      <div class="p-loading__title">
+        <span>ARCHITECTING MOTION</span>
+      </div>
+      <div class="p-loading__bar">
+        <div class="p-loading__bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor (Desktop fine pointer only) -->
+  <div class="c-cursor" aria-hidden="true"></div>
+
+  <!-- Header Component (10rem height PC, show/hide scroll) -->
+  <header class="l-header" data-nav>
+    <a href="/" class="l-header__logo" aria-label="Portfolio Home">
+      <span class="l-header__logo-dot" aria-hidden="true"></span>
+      <span>STUDIO / PORTFOLIO</span>
+    </a>
+
+    <div class="l-header__nav-group">
+      <button type="button" class="l-header__menu-btn" data-drawer-open aria-label="Open Navigation Menu"
+        aria-expanded="false">
+        <span class="l-header__menu-text">
+          <span class="l-header__menu-text-inner">
+            <span class="l-header__menu-text-item">Menu</span>
+            <span class="l-header__menu-text-item">Close</span>
+          </span>
+        </span>
+        <div class="l-header__menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer Dialog (data-lenis-prevent) -->
+  <dialog id="drawerMenu" data-lenis-prevent aria-label="Navigation Drawer">
+    <div class="p-drawer">
+      <!-- Drawer Header Bar -->
+      <div class="p-drawer__header">
+        <div class="p-drawer__brand">
+          <span class="l-header__logo-dot" aria-hidden="true"></span>
+          <span class="p-drawer__brand-text">STUDIO / DIRECTORY</span>
+        </div>
+        <button type="button" class="p-drawer__close-btn" data-drawer-close aria-label="Close Navigation Menu">
+          <span>Close</span>
+          <span class="p-drawer__close-icon" aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <!-- Main Drawer Body (2-Column Grid on Desktop) -->
+      <div class="p-drawer__body">
+        <nav class="p-drawer__nav" aria-label="Main Navigation">
+          <a href="/" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">01</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">HOME</span>
+              <span class="p-drawer__nav-sub">Main Overview</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="/about/" class="p-drawer__nav-link" aria-current="page">
+            <span class="c-num" aria-hidden="true">02</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">ABOUT</span>
+              <span class="p-drawer__nav-sub">Vision &amp; Philosophy (Active)</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="/#services" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">03</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">EXPERIENCE</span>
+              <span class="p-drawer__nav-sub">Education &amp; Background</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="/#features" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">04</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">SERVICES &amp; AI</span>
+              <span class="p-drawer__nav-sub">Solutions, AI &amp; Certifications</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="/#projects" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">05</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">SELECTED WORK</span>
+              <span class="p-drawer__nav-sub">Case Studies &amp; Experiments</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="/#contact" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">06</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">CONTACT</span>
+              <span class="p-drawer__nav-sub">Inquiries &amp; Collaborations</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <!-- Drawer Aside Info -->
+        <aside class="p-drawer__aside">
+          <div class="p-drawer__info-block">
+            <span class="p-drawer__info-label">PRIMARY INQUIRIES</span>
+            <a href="mailto:ichsanriantono@gmail.com"
+              class="p-drawer__info-value c-link-hover">ichsanriantono@gmail.com</a>
+          </div>
+
+          <div class="p-drawer__info-block">
+            <span class="p-drawer__info-label">DISCIPLINE MATRIX</span>
+            <p class="p-drawer__info-text">
+              Industrial Engineering • Full-Stack Web • 3D &amp; Motion Design • Autonomous AI Architecture
+            </p>
+          </div>
+
+          <div class="p-drawer__info-block">
+            <span class="p-drawer__info-label">CONNECT / SOCIAL</span>
+            <div class="p-drawer__socials">
+              <a href="https://github.com/itsan2" target="_blank" rel="noopener noreferrer"
+                class="p-drawer__social-link c-link-hover">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/m-ichsan-riantono-633311382/" target="_blank"
+                rel="noopener noreferrer" class="p-drawer__social-link c-link-hover">LinkedIn ↗</a>
+              <a href="https://www.instagram.com/itsan2" target="_blank" rel="noopener noreferrer"
+                class="p-drawer__social-link c-link-hover">Instagram ↗</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </dialog>
+
+  <main id="main-content">
+    <!-- 1. Hero / Statement (.p-top-message with 2-Column Grid & Avatar Badge) -->
+    <section class="p-top-message" style="padding-top: calc(var(--height-header-pc) + 2rem); border-bottom: 1px solid var(--color-beige-2);" id="about-hero">
+      <div class="l-container">
+        <div class="p-top-message__grid">
+          <!-- Left Column: Biography & Philosophy -->
+          <div class="p-top-message__content">
+            <span class="c-eyebrow" data-line-reveal>ABOUT ME</span>
+            <h1 class="p-top-message__heading" data-line-reveal data-line-reveal-delay="0.1">
+              <span data-text-fill-reveal>Blending Technical Logic &amp; Visual Creativity.</span>
+            </h1>
+            <p class="p-top-message__desc" data-line-reveal data-line-reveal-delay="0.2">
+              As an Industrial Engineering graduate, I bring a systematic and efficient approach to the creative world.
+              My focus spans full-stack web development, precise 3D modeling, cinematic video production, and more.
+              I believe that exceptional design is always grounded in a solid technical foundation.
+            </p>
+            <p class="p-top-message__desc" style="margin-top: -0.75rem; font-size: 1.05rem;" data-line-reveal data-line-reveal-delay="0.25">
+              Rooted in operations research, ergonomics, and production optimization, my engineering journey bridges analytical rigor with sensory visual storytelling. I construct digital platforms that combine zero-CLS architectural performance with cinematic 60fps kinetic motion and autonomous machine intelligence.
+            </p>
+            <div class="p-top-message__tags" data-line-reveal data-line-reveal-delay="0.3">
+              <span class="p-top-message__tag">Industrial Engineering</span>
+              <span class="p-top-message__tag">Full-Stack Development</span>
+              <span class="p-top-message__tag">3D &amp; Motion Design</span>
+              <span class="p-top-message__tag">Autonomous AI Architecture</span>
+              <span class="p-top-message__tag">Capital Market Analysis</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Avatar Graphic Badge (Identical to Main Page) -->
+          <div class="p-top-message__visual-col">
+            <div class="c-avatar-badge-wrap">
+              <div class="c-avatar-badge" aria-label="M. Ichsan Riantono Portrait Badge">
+                <!-- Ambient Cyan Glow -->
+                <div class="c-avatar-badge__glow" aria-hidden="true"></div>
+                <!-- Dark Base Circle -->
+                <div class="c-avatar-badge__circle" aria-hidden="true"></div>
+                <!-- Bottom Arch Pedestal -->
+                <div class="c-avatar-badge__arch" aria-hidden="true"></div>
+                <!-- Floating Decorative Cyan Geometry -->
+                <div class="c-avatar-badge__particle-dot" aria-hidden="true"></div>
+                <div class="c-avatar-badge__particle-ring-lg" aria-hidden="true"></div>
+                <div class="c-avatar-badge__particle-ring-sm" aria-hidden="true"></div>
+                <div class="c-avatar-badge__particle-ring-md" aria-hidden="true"></div>
+                <div class="c-avatar-badge__particle-arch-cyan" aria-hidden="true"></div>
+                <!-- Profile Portrait -->
+                <div class="c-avatar-badge__img-wrap">
+                  <picture>
+                    <source srcset="/img/itsan-portrait.webp" type="image/webp">
+                    <img src="/img/itsan-portrait.png" alt="M. Ichsan Riantono - Profile Portrait" width="590" height="647" loading="eager" decoding="async" class="c-avatar-badge__img">
+                  </picture>
+                </div>
+              </div>
+              <a href="mailto:ichsanriantono@gmail.com" class="c-avatar-badge__btn" aria-label="Get In Touch With Ichsan">
+                <span>Get In Touch</span>
+                <span class="c-avatar-badge__btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CTA / Recruitment (.l-footer__recruit) -->
+    <section class="l-footer__recruit" id="contact">
+      <div class="l-container">
+        <span class="c-eyebrow" data-line-reveal>START A CONVERSATION</span>
+        <h2 class="l-footer__recruit-headline" data-line-reveal data-line-reveal-delay="0.1">
+          HAVE A PROJECT IN MIND?<br>LET'S BUILD TOGETHER.
+        </h2>
+        <a href="mailto:ichsanriantono@gmail.com" class="c-btn-arrow" data-cursor-hover>
+          <span>INITIATE INQUIRY</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. Footer (footer.l-footer identical to index.html) -->
+  <footer class="l-footer">
+    <div class="l-container">
+      <div class="l-footer__inner">
+        <div>
+          <span style="font-family: var(--font-ttl); font-size: 1.25rem; font-weight: 700; display: block; margin-bottom: 1rem;">
+            PORTFOLIO / STUDIO
+          </span>
+          <p style="max-width: 360px; color: var(--color-beige-3); font-size: 0.9rem;">
+            Autonomous creative development, precision engineering, and sensory interaction design.
+          </p>
+        </div>
+
+        <nav class="l-footer__nav" aria-label="Footer Navigation">
+          <a href="/#about" class="l-footer__nav-link">About</a>
+          <a href="/#services" class="l-footer__nav-link">Experience</a>
+          <a href="/#features" class="l-footer__nav-link">Services</a>
+          <a href="/#certifications" class="l-footer__nav-link">Certifications</a>
+          <a href="/#projects" class="l-footer__nav-link">Projects</a>
+          <a href="mailto:ichsanriantono@gmail.com" class="l-footer__nav-link">Contact</a>
+        </nav>
+
+        <div class="l-footer__social">
+          <a href="https://github.com/itsan2" target="_blank" rel="noopener noreferrer" class="l-footer__social-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/m-ichsan-riantono-633311382/" target="_blank" rel="noopener noreferrer" class="l-footer__social-link">LinkedIn</a>
+          <a href="https://www.instagram.com/itsan2" target="_blank" rel="noopener noreferrer" class="l-footer__social-link">Instagram</a>
+        </div>
+      </div>
+
+      <div class="l-footer__bottom">
+        <span>&copy; 2026 Creative Developer Portfolio. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Phased Execution (ARCHITECTURE.md §2) -->
+  <script type="module" src="/src/js/loading.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

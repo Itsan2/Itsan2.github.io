@@ -1,0 +1,555 @@
+/**
+ * ABOUT PAGE STYLES (.p-about-*)
+ * Follows DESIGN.md tokens & bright-avenue.jp aesthetic
+ */
+
+/* ==========================================================================
+   Section 1: About Hero (.p-about-hero)
+   ========================================================================== */
+.p-about-hero {
+  position: relative;
+  min-height: 85vh;
+  padding-top: calc(var(--height-header-pc) + 2rem);
+  padding-bottom: 6rem;
+  background-color: var(--color-background);
+  overflow: hidden;
+}
+
+.p-about-hero__breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-blue-1);
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.p-about-hero__breadcrumb:hover {
+  color: var(--color-text);
+}
+
+.p-about-hero__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 5rem;
+}
+
+.p-about-hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-about-hero__title {
+  font-family: var(--font-ttl);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin-bottom: 1.75rem;
+}
+
+.p-about-hero__lead {
+  font-family: var(--font-base);
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  line-height: 1.7;
+  color: var(--color-text);
+  opacity: 0.88;
+  margin-bottom: 2.5rem;
+}
+
+.p-about-hero__stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-beige-2);
+}
+
+.p-about-hero__stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.p-about-hero__stat-val {
+  font-family: var(--font-ttl);
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  font-weight: 800;
+  color: var(--color-blue-1);
+  letter-spacing: -0.02em;
+}
+
+.p-about-hero__stat-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  opacity: 0.75;
+}
+
+/* Hero Portrait Art Frame */
+.p-about-hero__visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.p-about-hero__art-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #121416;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.25),
+              0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.p-about-hero__art-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.8s var(--ease-out-expo);
+}
+
+.p-about-hero__art-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(15, 18, 20, 0.85) 85%,
+    rgba(15, 18, 20, 0.98) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.p-about-hero__art-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(96, 154, 174, 0.2);
+  border: 1px solid rgba(96, 154, 174, 0.4);
+  border-radius: 9999px;
+  color: #a2d2e2;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+  width: fit-content;
+}
+
+.p-about-hero__art-name {
+  color: var(--color-white);
+  font-family: var(--font-ttl);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.p-about-hero__art-sub {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .p-about-hero__art-card:hover .p-about-hero__art-img {
+    transform: scale(1.05);
+  }
+}
+
+/* ==========================================================================
+   Section 2: The Core Philosophy (.p-about-philosophy)
+   ========================================================================== */
+.p-about-philosophy {
+  padding-block: 8rem;
+  border-top: 1px solid var(--color-beige-2);
+  background-color: var(--color-background);
+}
+
+.p-about-philosophy__header {
+  margin-bottom: 4.5rem;
+  max-width: 800px;
+}
+
+.p-about-philosophy__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.p-about-card {
+  background: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 3rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s var(--ease-out-expo),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-about-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .p-about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+    border-color: rgba(96, 154, 174, 0.35);
+  }
+  .p-about-card:hover::before {
+    background-color: var(--color-blue-1);
+  }
+}
+
+.p-about-card__num {
+  font-family: var(--font-ttl);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-blue-1);
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.05em;
+}
+
+.p-about-card__title {
+  font-family: var(--font-ttl);
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text);
+  margin-bottom: 1.15rem;
+}
+
+.p-about-card__desc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   Section 3: Narrative Journey (.p-about-narrative)
+   ========================================================================== */
+.p-about-narrative {
+  padding-block: 8rem;
+  border-top: 1px solid var(--color-beige-2);
+  background-color: var(--color-background);
+}
+
+.p-about-narrative__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.p-about-narrative__left {
+  position: sticky;
+  top: calc(var(--height-header-pc) + 2rem);
+}
+
+.p-about-narrative__right {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.p-about-story-block {
+  padding-left: 2rem;
+  border-left: 2px solid var(--color-beige-2);
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.p-about-story-block::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0.3rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: var(--color-beige-3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.p-about-story-block:hover {
+  border-left-color: var(--color-blue-1);
+}
+
+.p-about-story-block:hover::before {
+  background-color: var(--color-blue-1);
+  transform: scale(1.3);
+}
+
+.p-about-story-block__year {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-blue-1);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.p-about-story-block__title {
+  font-family: var(--font-ttl);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.p-about-story-block__text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  opacity: 0.88;
+}
+
+/* ==========================================================================
+   Section 4: Technical Arsenal (.p-about-arsenal)
+   ========================================================================== */
+.p-about-arsenal {
+  padding-block: 8rem;
+  border-top: 1px solid var(--color-beige-2);
+  background-color: var(--color-background);
+}
+
+.p-about-arsenal__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.p-about-arsenal__category {
+  background: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 2.75rem;
+}
+
+.p-about-arsenal__cat-title {
+  font-family: var(--font-ttl);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.p-about-arsenal__cat-sub {
+  font-size: 0.88rem;
+  color: var(--color-blue-1);
+  font-weight: 600;
+  margin-bottom: 1.75rem;
+}
+
+.p-about-arsenal__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.p-about-arsenal__pill {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .p-about-arsenal__pill:hover {
+    background-color: var(--color-text);
+    color: var(--color-white);
+    border-color: var(--color-text);
+  }
+}
+
+/* ==========================================================================
+   Section 5: Call to Action (.p-about-cta)
+   ========================================================================== */
+.p-about-cta {
+  padding-block: 9rem;
+  border-top: 1px solid var(--color-beige-2);
+  background: radial-gradient(circle at 50% 50%, #1e2429 0%, #111417 100%);
+  color: var(--color-white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-about-cta__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(96, 154, 174, 0.3) 0%, transparent 70%);
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.p-about-cta__container {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.p-about-cta__title {
+  font-family: var(--font-ttl);
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+.p-about-cta__desc {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.75rem;
+}
+
+.p-about-cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.p-about-cta__btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-blue-1);
+  color: var(--color-white);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 24px rgba(96, 154, 174, 0.4);
+  transition: transform 0.35s var(--ease-out-expo), background-color 0.3s ease, box-shadow 0.35s ease;
+}
+
+.p-about-cta__btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1rem 2.25rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.35s var(--ease-out-expo), background-color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .p-about-cta__btn-primary:hover {
+    background-color: var(--color-blue-2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(96, 154, 174, 0.55);
+  }
+  .p-about-cta__btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+  }
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .p-about-hero {
+    padding-top: calc(var(--height-header-pc) + 1rem);
+    padding-bottom: 4rem;
+  }
+  .p-about-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .p-about-hero__stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .p-about-philosophy__grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .p-about-narrative__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .p-about-narrative__left {
+    position: static;
+  }
+  .p-about-arsenal__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-about-hero__stats-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .p-about-card {
+    padding: 2.25rem 1.75rem;
+  }
+  .p-about-arsenal__category {
+    padding: 2rem 1.5rem;
+  }
+  .p-about-cta__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .p-about-cta__btn-primary,
+  .p-about-cta__btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

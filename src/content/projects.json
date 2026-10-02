@@ -1,0 +1,82 @@
+{
+  "projects": [
+    {
+      "id": "kaiseki",
+      "title": "Kaiseki | Modern Asian Luxury Dining",
+      "category": "Web Engineering / Luxury Dining",
+      "year": "2025",
+      "role": "Fullstack & Creative Motion Developer",
+      "tagline": "Experience the Art of Modern Asian Dining where Tradition Meets Contemporary Sophistication.",
+      "summary": "High-end digital culinary showcase featuring cinematic GSAP motion, Next.js 15 App Router, and fluid kinetic typography.",
+      "image": "/img/projects/kaiseki.png",
+      "video": "/video/kaiseki.mp4",
+      "url": "https://website-food-kaiseki.vercel.app/",
+      "github": "https://github.com/Itsan2/Website-Food-Kaiseki",
+      "stack": [
+        "Next.js 15+ (App Router)",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "GSAP & ScrollTrigger",
+        "Framer Motion",
+        "Lenis Smooth Scroll",
+        "Lucide React",
+        "React Hook Form",
+        "Zod"
+      ]
+    },
+    {
+      "id": "perfume",
+      "title": "PERFUME | Essence of Timeless Seduction",
+      "category": "Luxury E-Commerce / Creative 3D Web",
+      "year": "2025",
+      "role": "Fullstack 3D & Creative Frontend Engineer",
+      "tagline": "A luxury perfume house crafting the essence of timeless seduction. Scent is the invisible architecture of memory.",
+      "summary": "High-end luxury fragrance digital flagship featuring interactive 3D WebGL experiences, frame-by-frame canvas scroll sequences, and avant-garde editorial typography.",
+      "image": "/img/projects/perfume.png",
+      "video": "/video/store-perfume.mp4",
+      "url": "https://store-perfume.vercel.app/",
+      "github": "https://github.com/Itsan2/Store-Perfume",
+      "stack": [
+        "Next.js 14 (App Router)",
+        "React 18",
+        "TypeScript 5",
+        "Three.js",
+        "@react-three/fiber",
+        "@react-three/drei",
+        "Framer Motion 12",
+        "Studio Freight Lenis",
+        "Tailwind CSS 3.4",
+        "Zustand 5",
+        "Lucide React"
+      ]
+    },
+    {
+      "title": "Monolith Architectural Studio",
+      "category": "Branding / Web Experience",
+      "year": "2025",
+      "role": "Frontend Architect",
+      "summary": "Bespoke digital presence for a minimalist architectural studio, featuring fluid typography and mask-slide transitions.",
+      "image": "/img/projects/project-3.webp",
+      "url": "https://example.com/project-3"
+    },
+    {
+      "title": "Vectra Autonomous Fleet",
+      "category": "Dashboard / UI Engineering",
+      "year": "2024",
+      "role": "Fullstack Creative Developer",
+      "summary": "Telemetry monitoring dashboard with telemetry data streaming and accessible dark/light presentation modes.",
+      "image": "/img/projects/project-4.webp",
+      "url": "https://example.com/project-4"
+    },
+    {
+      "title": "Chrono Media Collective",
+      "category": "Motion / Design System",
+      "year": "2024",
+      "role": "Design Technologist",
+      "summary": "Multi-brand dynamic editorial system with localized typographic scales and smooth Lenis-driven scrollytelling.",
+      "image": "/img/projects/project-5.webp",
+      "url": "https://example.com/project-5"
+    }
+  ]
+}

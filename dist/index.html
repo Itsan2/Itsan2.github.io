@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Developer &amp; Motion Engineer — Portfolio</title>
+  <meta name="description"
+    content="Personal portfolio of a Senior Creative Developer &amp; Frontend Engineer specializing in high-performance web experiences, fluid motion choreography, and architectural design systems.">
+  <meta name="theme-color" content="#609aae">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://example.com/">
+
+  <!-- Structured Data: JSON-LD (PRD Phase 6) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Creative Developer & Technologist",
+    "jobTitle": "Lead Creative Developer & Frontend Engineer",
+    "url": "https://example.com/",
+    "sameAs": [
+      "https://github.com/itsan2",
+      "https://www.linkedin.com/in/m-ichsan-riantono-633311382/",
+      "https://www.instagram.com/itsan2"
+    ],
+    "knowsAbout": [
+      "Creative Frontend Development",
+      "GSAP Motion Choreography",
+      "WebGL & Shader Development",
+      "Design Systems & Token Architecture",
+      "Progressive Web Optimization"
+    ]
+  }
+  </script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:title" content="Creative Developer &amp; Motion Engineer — Portfolio">
+  <meta property="og:description"
+    content="Personal portfolio of a Senior Creative Developer specializing in high-performance web experiences and motion design.">
+  <meta property="og:image" content="/img/hero-poster.webp">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Creative Developer &amp; Motion Engineer — Portfolio">
+  <meta property="twitter:description"
+    content="Personal portfolio of a Senior Creative Developer specializing in high-performance web experiences and motion design.">
+  <meta property="twitter:image" content="/img/hero-poster.webp">
+
+  <!-- Critical Inline CSS: Anti-FOUC & First-Paint (DESIGN.md §7, MOTION.md §1) -->
+  <style>
+    html {
+      background-color: #609aae;
+    }
+
+    .p-loading {
+      background-color: #609aae;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    html.is-history-navigation .p-loading {
+      display: none !important;
+    }
+  </style>
+
+  <!-- Progressive Enhancement Fallback (AGENTS.md & PRD §6) -->
+  <noscript>
+    <style>
+      .p-loading {
+        display: none !important;
+      }
+
+      [data-line-reveal],
+      [data-image-reveal],
+      [data-section-parallax] {
+        opacity: 1 !important;
+        transform: none !important;
+        clip-path: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Typography: Google Fonts (Inter + Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <script type="module" crossorigin src="/assets/main-CHXci1GB.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CACvO-l8.css">
+</head>
+
+<body>
+  <!-- 0. Loading Overlay (MOTION.md §1) -->
+  <div class="p-loading" aria-hidden="true">
+    <div class="p-loading__curtain"></div>
+    <div class="p-loading__content">
+      <div class="p-loading__title">
+        <span>ARCHITECTING MOTION</span>
+      </div>
+      <div class="p-loading__bar">
+        <div class="p-loading__bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor (Desktop fine pointer only) -->
+  <div class="c-cursor" aria-hidden="true"></div>
+
+  <!-- Header Component (10rem height PC, show/hide scroll) -->
+  <header class="l-header" data-nav>
+    <a href="#" class="l-header__logo" aria-label="Portfolio Home">
+      <span class="l-header__logo-dot" aria-hidden="true"></span>
+      <span>STUDIO / PORTFOLIO</span>
+    </a>
+
+    <div class="l-header__nav-group">
+      <button type="button" class="l-header__menu-btn" data-drawer-open aria-label="Open Navigation Menu"
+        aria-expanded="false">
+        <span class="l-header__menu-text">
+          <span class="l-header__menu-text-inner">
+            <span class="l-header__menu-text-item">Menu</span>
+            <span class="l-header__menu-text-item">Close</span>
+          </span>
+        </span>
+        <div class="l-header__menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer Dialog (data-lenis-prevent) -->
+  <dialog id="drawerMenu" data-lenis-prevent aria-label="Navigation Drawer">
+    <div class="p-drawer">
+      <!-- Drawer Header Bar -->
+      <div class="p-drawer__header">
+        <div class="p-drawer__brand">
+          <span class="l-header__logo-dot" aria-hidden="true"></span>
+          <span class="p-drawer__brand-text">STUDIO / DIRECTORY</span>
+        </div>
+        <button type="button" class="p-drawer__close-btn" data-drawer-close aria-label="Close Navigation Menu">
+          <span>Close</span>
+          <span class="p-drawer__close-icon" aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <!-- Main Drawer Body (2-Column Grid on Desktop) -->
+      <div class="p-drawer__body">
+        <!-- Main Navigation Links -->
+        <nav class="p-drawer__nav" aria-label="Main Navigation">
+          <a href="#about" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">01</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">ABOUT</span>
+              <span class="p-drawer__nav-sub">Vision &amp; Philosophy</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#services" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">02</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">EXPERIENCE</span>
+              <span class="p-drawer__nav-sub">Education &amp; Background</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#features" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">03</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">SERVICES &amp; AI</span>
+              <span class="p-drawer__nav-sub">Solutions, AI &amp; Certifications</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#projects" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">04</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">SELECTED WORK</span>
+              <span class="p-drawer__nav-sub">Case Studies &amp; Experiments</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#contact" class="p-drawer__nav-link">
+            <span class="c-num" aria-hidden="true">05</span>
+            <div class="p-drawer__nav-text">
+              <span class="p-drawer__nav-title">GET IN TOUCH</span>
+              <span class="p-drawer__nav-sub">Start a Collaboration</span>
+            </div>
+            <span class="p-drawer__nav-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <!-- Aside Information (CONTENT.md, MOTION.md drawerasidetextin) -->
+        <aside class="p-drawer__aside" aria-label="Social Links">
+          <div class="p-drawer__aside-block">
+            <span class="c-eyebrow" style="color: var(--color-blue-1); margin-bottom: 0.75rem;">NETWORK &amp;
+              CONNECT</span>
+            <div class="p-drawer__social-grid">
+              <a href="https://github.com/itsan2" target="_blank" rel="noopener noreferrer"
+                class="p-drawer__social-link">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/m-ichsan-riantono-633311382/" target="_blank" rel="noopener noreferrer"
+                class="p-drawer__social-link">LinkedIn ↗</a>
+              <a href="https://www.instagram.com/itsan2" target="_blank" rel="noopener noreferrer"
+                class="p-drawer__social-link">Instagram ↗</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Drawer Footer Bar -->
+      <div class="p-drawer__footer">
+        <div class="p-drawer__footer-col">
+          <span>&copy; 2026 Creative Developer Portfolio</span>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Project Detail Modal Dialog (Progressive Enhancement, data-lenis-prevent) -->
+  <dialog id="projectModal" class="c-project-modal" data-lenis-prevent aria-label="Project Case Study"
+    aria-modal="true">
+    <div class="c-project-modal__wrapper">
+      <div class="c-project-modal__dialog" role="document">
+        <!-- Header Bar -->
+        <div class="c-project-modal__header">
+          <div class="c-project-modal__badge-group">
+            <span class="c-project-modal__badge">CASE STUDY</span>
+            <span class="c-project-modal__category" data-modal-field="category">Web Engineering / Luxury Dining</span>
+          </div>
+          <button type="button" class="c-project-modal__close-btn" data-project-modal-close
+            aria-label="Close Project Modal" data-cursor-hover>
+            <span>Close</span>
+            <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+
+        <!-- Scrollable Body -->
+        <div class="c-project-modal__content" data-lenis-prevent>
+          <!-- Media Showcase with Live Badge -->
+          <div class="c-project-modal__media-frame">
+            <video class="c-project-modal__video" data-modal-field="video" autoplay loop muted playsinline preload="auto" poster="/img/projects/kaiseki.png">
+              <source src="/video/kaiseki.mp4" type="video/mp4" data-modal-field="videoSource">
+            </video>
+            <div class="c-project-modal__media-status">
+              <span class="c-project-modal__status-dot" aria-hidden="true"></span>
+              <span>LIVE PRODUCTION</span>
+            </div>
+          </div>
+
+          <!-- Main Intro -->
+          <div class="c-project-modal__intro">
+            <div class="c-project-modal__meta" data-modal-field="meta">
+              <span>2025</span>
+              <span>•</span>
+              <span>Fullstack &amp; Creative Motion Developer</span>
+            </div>
+            <h2 class="c-project-modal__title" data-modal-field="title">Kaiseki | Modern Asian Luxury Dining</h2>
+            <p class="c-project-modal__tagline" data-modal-field="tagline">
+              "Experience the Art of Modern Asian Dining where Tradition Meets Contemporary Sophistication."
+            </p>
+
+            <!-- Action Links CTA -->
+            <div class="c-project-modal__cta-group">
+              <a href="https://website-food-kaiseki.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="c-project-modal__cta-btn c-project-modal__cta-btn--primary" data-modal-field="liveBtn"
+                data-cursor-hover>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+                <span>Live Website Demo</span>
+                <span class="c-project-modal__arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a href="https://github.com/Itsan2/Website-Food-Kaiseki" target="_blank" rel="noopener noreferrer"
+                class="c-project-modal__cta-btn c-project-modal__cta-btn--secondary" data-modal-field="githubBtn"
+                data-cursor-hover>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+                <span>GitHub Repository</span>
+                <span class="c-project-modal__arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2-Column Info Grid: Overview & Tech Stack -->
+          <div class="c-project-modal__details-grid">
+            <!-- Left: About The Website -->
+            <div class="c-project-modal__col" data-modal-field="aboutCol">
+              <h3 class="c-project-modal__section-heading">About The Project</h3>
+              <p class="c-project-modal__paragraph">
+                <strong>KAISEKI</strong> is a luxury dining digital experience engineered for an elite Asian-fusion
+                restaurant chain. Combining contemporary editorial aesthetics with high-performance modern web
+                architecture, the platform delivers a cinematic culinary journey through immersive 3D-like visuals,
+                fluid kinetic motion, and precise typographic craftsmanship.
+              </p>
+              <p class="c-project-modal__paragraph">
+                Every touchpoint—from atmospheric steam reveals on signature dishes to interactive table bookings—is
+                meticulously choreographed to reflect the refinement of modern Japanese and Asian gastronomy.
+              </p>
+
+              <h4 class="c-project-modal__sub-heading">Key Architectural Highlights</h4>
+              <ul class="c-project-modal__feature-list">
+                <li>
+                  <strong>🏆 Immersive Storytelling:</strong> Scroll-driven brand narrative leveraging GSAP and
+                  ScrollTrigger for a dynamic, cinematic journey.
+                </li>
+                <li>
+                  <strong>🍣 Signature Menu Showcase:</strong> High-fidelity digital culinary curation featuring flavor
+                  profiles, artisanal ingredients, and pricing.
+                </li>
+                <li>
+                  <strong>📜 Fluid Kinetic Motion:</strong> High-performance Lenis smooth scrolling integration for a
+                  weightless, responsive feel across all devices.
+                </li>
+                <li>
+                  <strong>🥂 Frictionless Reservation &amp; Locations:</strong> Streamlined table booking engine
+                  validated with React Hook Form and Zod, complete with interactive global location discovery.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right: Technologies & Tech Stack -->
+            <div class="c-project-modal__col" data-modal-field="stackCol">
+              <h3 class="c-project-modal__section-heading">Technologies &amp; Architecture</h3>
+
+              <div class="c-project-modal__stack-block">
+                <span class="c-project-modal__stack-label">Core Runtime &amp; Framework</span>
+                <div class="c-project-modal__pills">
+                  <span class="c-project-modal__pill">Next.js 15+ (App Router)</span>
+                  <span class="c-project-modal__pill">React 19</span>
+                  <span class="c-project-modal__pill">TypeScript</span>
+                </div>
+              </div>
+
+              <div class="c-project-modal__stack-block">
+                <span class="c-project-modal__stack-label">Motion &amp; Kinetic Animation</span>
+                <div class="c-project-modal__pills">
+                  <span class="c-project-modal__pill">GSAP 3</span>
+                  <span class="c-project-modal__pill">ScrollTrigger</span>
+                  <span class="c-project-modal__pill">Framer Motion</span>
+                  <span class="c-project-modal__pill">Lenis Smooth Scroll</span>
+                </div>
+              </div>
+
+              <div class="c-project-modal__stack-block">
+                <span class="c-project-modal__stack-label">Styling &amp; UI Systems</span>
+                <div class="c-project-modal__pills">
+                  <span class="c-project-modal__pill">Tailwind CSS 4</span>
+                  <span class="c-project-modal__pill">Lucide React Icons</span>
+                  <span class="c-project-modal__pill">Modern Asian Dark Aesthetics</span>
+                </div>
+              </div>
+
+              <div class="c-project-modal__stack-block">
+                <span class="c-project-modal__stack-label">Form Validation &amp; Deployment</span>
+                <div class="c-project-modal__pills">
+                  <span class="c-project-modal__pill">React Hook Form</span>
+                  <span class="c-project-modal__pill">Zod Schema Validation</span>
+                  <span class="c-project-modal__pill">Vercel Edge Network</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Main Content Container -->
+  <main id="main-content">
+    <!-- 1. Hero / FV (.p-top-fv) -->
+    <section class="p-top-fv" id="hero">
+      <div class="p-top-fv__bg-media" data-section-parallax-background-trigger data-scale-from="1.2" data-scale-to="1.0"
+        aria-hidden="true">
+        <img src="/img/itsan.jpeg" alt="" class="p-top-fv__poster-blur" fetchpriority="high">
+      </div>
+
+      <div class="l-container p-top-fv__content">
+        <div class="p-top-fv__role" data-line-reveal data-line-reveal-delay="0.1">
+          I'm M. Ichsan Riantono
+        </div>
+        <h1 class="p-top-fv__headline" data-line-reveal data-line-reveal-delay="0.2">
+          A Web Developer.
+        </h1>
+
+        <div class="p-top-fv__bottom">
+          <div class="p-top-fv__info" data-line-reveal data-line-reveal-delay="0.3">
+            <p class="p-top-fv__desc">
+              I specialize in crafting elevated digital experiences. Turning complex problems into elegant, user-centric
+              solutions.
+            </p>
+            <div class="p-top-fv__actions">
+              <a href="#contact" class="p-top-fv__btn p-top-fv__btn--primary" data-cursor-hover>
+                <span>Hire Me</span>
+                <span class="p-top-fv__btn-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#portfolio" class="p-top-fv__btn p-top-fv__btn--secondary" data-cursor-hover>
+                <span>View Work</span>
+                <span class="p-top-fv__btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <div class="p-top-fv__scroll-indicator" aria-hidden="true">
+            <span>SCROLL TO EXPLORE</span>
+            <span class="p-top-fv__scroll-arrow">↓</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Statement / About (.p-top-message) -->
+    <section class="p-top-message" id="about">
+      <div class="l-container">
+        <div class="p-top-message__grid">
+          <!-- Left Column: Biography & Philosophy -->
+          <div class="p-top-message__content">
+            <span class="c-eyebrow" data-line-reveal>ABOUT ME</span>
+            <h2 class="p-top-message__heading" data-line-reveal data-line-reveal-delay="0.1">
+              <span data-text-fill-reveal>Blending Technical Logic &amp; Visual Creativity.</span>
+            </h2>
+            <p class="p-top-message__desc" data-line-reveal data-line-reveal-delay="0.2">
+              As an Industrial Engineering graduate, I bring a systematic and efficient approach to the creative world.
+              My focus spans full-stack web development, precise 3D modeling, cinematic video production, and more.
+              I believe that exceptional design is always grounded in a solid technical foundation.
+            </p>
+            <div class="p-top-message__tags" data-line-reveal data-line-reveal-delay="0.3">
+              <span class="p-top-message__tag">Full-Stack Development</span>
+              <span class="p-top-message__tag">System Architecture</span>
+              <span class="p-top-message__tag">3D &amp; Motion Design</span>
+              <span class="p-top-message__tag">Industrial Engineering</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Avatar Graphic Badge & CTA -->
+          <div class="p-top-message__visual-col">
+            <div class="c-avatar-badge-wrap">
+              <div class="c-avatar-badge" aria-label="M. Ichsan Riantono Portrait Badge">
+                <!-- Ambient Cyan Glow -->
+                <div class="c-avatar-badge__glow" aria-hidden="true"></div>
+                <!-- Dark Base Circle -->
+                <div class="c-avatar-badge__circle" aria-hidden="true"></div>
+                <!-- Bottom Arch Pedestal -->
+                <div class="c-avatar-badge__arch" aria-hidden="true"></div>
+                <!-- Floating Decorative Cyan Geometry -->
+                <div class="c-avatar-badge__particle-dot" aria-hidden="true"></div>
+                <div class="c-avatar-badge__particle-ring-lg" aria-hidden="true"></div>
+                <div class="c-avatar-badge__particle-ring-sm" aria-hidden="true"></div>
+                <div class="c-avatar-badge__particle-ring-md" aria-hidden="true"></div>
+                <div class="c-avatar-badge__particle-arch-cyan" aria-hidden="true"></div>
+                <!-- Profile Portrait -->
+                <div class="c-avatar-badge__img-wrap">
+                  <picture>
+                    <source srcset="/img/itsan-portrait.webp" type="image/webp">
+                    <img src="/img/itsan-portrait.png" alt="M. Ichsan Riantono - Profile Portrait" width="590" height="647" loading="lazy" decoding="async" class="c-avatar-badge__img">
+                  </picture>
+                </div>
+              </div>
+              <a href="/about/" class="c-avatar-badge__btn" aria-label="Get To Know Me Better - View About Page">
+                <span>Get To Know Me Better</span>
+                <span class="c-avatar-badge__btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Education & Experience (.p-top-service) -->
+    <section class="p-top-service" id="services">
+      <div class="l-container">
+        <div class="p-top-service__header">
+          <span class="c-eyebrow" data-line-reveal>EDUCATION &amp; EXPERIENCE</span>
+          <h2 class="c-section-heading" style="margin-bottom: 0;" data-line-reveal data-line-reveal-delay="0.1">
+            Empowering Creativity<br>Through Experience.
+          </h2>
+        </div>
+
+        <div class="p-top-resume__grid">
+          <!-- Column 1: Education -->
+          <div class="p-top-resume__column">
+            <div class="p-top-resume__col-header" data-line-reveal>
+              <h3 class="p-top-resume__col-title">Education</h3>
+              <span class="p-top-resume__badge">Academic &amp; Design</span>
+            </div>
+
+            <div class="p-top-resume__list">
+              <!-- Education 1 -->
+              <div class="p-top-resume__item" data-line-reveal data-line-reveal-delay="0.15">
+                <div class="p-top-resume__meta">
+                  <span class="p-top-resume__period">2023 — 2027</span>
+                  <span class="p-top-resume__institution">STT Migas Balikpapan</span>
+                </div>
+                <h4 class="p-top-resume__title">Bachelor Degree of Industrial Engineering</h4>
+                <p class="p-top-resume__desc">
+                  Graduated with in-depth knowledge of industrial engineering, operational management, and process
+                  efficiency. Engaged in various research and development projects focused on production optimization
+                  and
+                  the implementation of technology in the oil and gas industry. Experienced in data analysis, system
+                  planning, and quality improvement to enhance operational efficiency.
+                </p>
+              </div>
+
+              <!-- Education 2 -->
+              <div class="p-top-resume__item" data-line-reveal data-line-reveal-delay="0.25">
+                <div class="p-top-resume__meta">
+                  <span class="p-top-resume__period">2023 — 2024</span>
+                  <span class="p-top-resume__institution">Professional Certification</span>
+                </div>
+                <h4 class="p-top-resume__title">Degree of UI &amp; UX</h4>
+                <p class="p-top-resume__desc">
+                  Gained in-depth knowledge of user interface (UI) and user experience (UX) design principles. Focused
+                  on
+                  creating intuitive, user-friendly digital products by understanding user behavior, wireframing,
+                  prototyping, and usability testing. Developed strong skills in design thinking and problem-solving to
+                  enhance digital experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Experience -->
+          <div class="p-top-resume__column">
+            <div class="p-top-resume__col-header" data-line-reveal>
+              <h3 class="p-top-resume__col-title">Experience</h3>
+              <span class="p-top-resume__badge">Work &amp; Leadership</span>
+            </div>
+
+            <div class="p-top-resume__list">
+              <!-- Experience 1 -->
+              <div class="p-top-resume__item" data-line-reveal data-line-reveal-delay="0.15">
+                <div class="p-top-resume__meta">
+                  <span class="p-top-resume__period">2017 — Present</span>
+                  <span class="p-top-resume__institution">ITSANFOLIO.COM</span>
+                </div>
+                <h4 class="p-top-resume__title">Web Developer &amp; Business Partner</h4>
+                <p class="p-top-resume__desc">
+                  Specialized in designing, developing, and maintaining high-performance websites with a focus on user
+                  experience and functionality. Collaborated with businesses to create digital solutions that enhance
+                  brand presence and drive customer engagement. Proficient in front-end and back-end technologies,
+                  ensuring seamless integration.
+                </p>
+              </div>
+
+              <!-- Experience 2 -->
+              <div class="p-top-resume__item" data-line-reveal data-line-reveal-delay="0.25">
+                <div class="p-top-resume__meta">
+                  <span class="p-top-resume__period">2019 — Present</span>
+                  <span class="p-top-resume__institution">AGS 89 Travel</span>
+                </div>
+                <h4 class="p-top-resume__title">IT Developer &amp; Marketing</h4>
+                <p class="p-top-resume__desc">
+                  Spearheaded the development of digital platforms and marketing strategies to enhance online presence.
+                  Responsibilities included building user-friendly booking interfaces, optimizing website performance
+                  (SEO), and executing data-driven digital marketing campaigns to drive customer acquisition and
+                  business
+                  growth.
+                </p>
+              </div>
+
+              <!-- Experience 3 -->
+              <div class="p-top-resume__item" data-line-reveal data-line-reveal-delay="0.35">
+                <div class="p-top-resume__meta">
+                  <span class="p-top-resume__period">2023 — 2024</span>
+                  <span class="p-top-resume__institution">Bina Akrab Organization</span>
+                </div>
+                <h4 class="p-top-resume__title">PDD Committee Member</h4>
+                <div class="p-top-resume__role">Publication, Decoration, &amp; Documentation</div>
+                <p class="p-top-resume__desc">
+                  Contributed to the visual direction and documentation for organizational events at Bina Akrab
+                  Industrial Engineering. Responsibilities included designing digital promotional assets, capturing
+                  photo
+                  and video documentation, and assisting in event decorations to create engaging participant
+                  experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Services & AI (.p-top-feature with parallax) -->
+    <section class="p-top-feature" id="features" data-section-parallax data-section-parallax-factor="0.6">
+      <div class="l-container">
+        <!-- Section Header -->
+        <div class="p-top-feature__header">
+          <span class="c-eyebrow" data-line-reveal>INSPIRING THE WORLD</span>
+          <h2 class="c-section-heading" data-line-reveal data-line-reveal-delay="0.1">
+            One Project.
+          </h2>
+          <p class="p-top-feature__desc" data-line-reveal data-line-reveal-delay="0.2">
+            Discover our comprehensive range of services tailored to fuel the growth and success of your digital
+            presence.
+          </p>
+        </div>
+
+        <!-- Core Digital Services Grid (3 Columns) -->
+        <div class="p-top-feature__grid">
+          <!-- 1. UI/UX Design -->
+          <div class="p-top-feature__card" data-line-reveal data-line-reveal-delay="0.1" data-cursor-hover>
+            <div class="p-top-feature__card-top">
+              <span class="p-top-feature__card-num">01</span>
+              <span class="p-top-feature__card-tag">DESIGN</span>
+            </div>
+            <h3 class="p-top-feature__card-title">UI/UX Design</h3>
+            <p class="p-top-feature__card-text">Creating intuitive, aesthetic, and user-centric interfaces.</p>
+          </div>
+
+          <!-- 2. Web Development -->
+          <div class="p-top-feature__card" data-line-reveal data-line-reveal-delay="0.15" data-cursor-hover>
+            <div class="p-top-feature__card-top">
+              <span class="p-top-feature__card-num">02</span>
+              <span class="p-top-feature__card-tag">ENGINEERING</span>
+            </div>
+            <h3 class="p-top-feature__card-title">Web Development</h3>
+            <p class="p-top-feature__card-text">Building fast, full-stack, and scalable web applications.</p>
+          </div>
+
+          <!-- 3. Mobile Apps -->
+          <div class="p-top-feature__card" data-line-reveal data-line-reveal-delay="0.2" data-cursor-hover>
+            <div class="p-top-feature__card-top">
+              <span class="p-top-feature__card-num">03</span>
+              <span class="p-top-feature__card-tag">MOBILE</span>
+            </div>
+            <h3 class="p-top-feature__card-title">Mobile Apps</h3>
+            <p class="p-top-feature__card-text">Developing cross-platform mobile experiences.</p>
+          </div>
+
+          <!-- 4. Branding -->
+          <div class="p-top-feature__card" data-line-reveal data-line-reveal-delay="0.25" data-cursor-hover>
+            <div class="p-top-feature__card-top">
+              <span class="p-top-feature__card-num">04</span>
+              <span class="p-top-feature__card-tag">IDENTITY</span>
+            </div>
+            <h3 class="p-top-feature__card-title">Branding</h3>
+            <p class="p-top-feature__card-text">Crafting modern brand identities with deep impact.</p>
+          </div>
+
+          <!-- 5. SEO Optimization -->
+          <div class="p-top-feature__card" data-line-reveal data-line-reveal-delay="0.3" data-cursor-hover>
+            <div class="p-top-feature__card-top">
+              <span class="p-top-feature__card-num">05</span>
+              <span class="p-top-feature__card-tag">GROWTH</span>
+            </div>
+            <h3 class="p-top-feature__card-title">SEO Optimization</h3>
+            <p class="p-top-feature__card-text">Enhancing visibility and organic search rankings.</p>
+          </div>
+
+          <!-- 6. Cloud Architecture -->
+          <div class="p-top-feature__card" data-line-reveal data-line-reveal-delay="0.35" data-cursor-hover>
+            <div class="p-top-feature__card-top">
+              <span class="p-top-feature__card-num">06</span>
+              <span class="p-top-feature__card-tag">INFRASTRUCTURE</span>
+            </div>
+            <h3 class="p-top-feature__card-title">Cloud Architecture</h3>
+            <p class="p-top-feature__card-text">Designing robust and secure cloud infrastructures.</p>
+          </div>
+        </div>
+
+        <!-- Separate Dedicated AI & Machine Learning Tier -->
+        <div class="p-top-feature__ai-section">
+          <div class="p-top-feature__ai-header" data-line-reveal>
+            <span class="c-eyebrow" style="color: var(--color-blue-1); margin: 0;">ADVANCED COMPUTING &amp;
+              INTELLIGENCE</span>
+            <div class="p-top-feature__ai-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="p-top-feature__ai-grid">
+            <!-- AI Engineer Card -->
+            <div class="p-top-feature__ai-card" data-line-reveal data-line-reveal-delay="0.1" data-cursor-hover>
+              <div class="p-top-feature__ai-badge">
+                <span class="p-top-feature__ai-dot" aria-hidden="true"></span>
+                <span>AI SPECIALIZATION</span>
+              </div>
+              <h3 class="p-top-feature__ai-title">AI Engineer</h3>
+              <p class="p-top-feature__ai-text">
+                Developing intelligent autonomous agents, integrating Large Language Models (LLM), building robust
+                Retrieval-Augmented Generation (RAG) pipelines, and architecting cognitive system automation.
+              </p>
+              <div class="p-top-feature__ai-tags">
+                <span>Autonomous Agents</span>
+                <span>LLM Pipelines</span>
+                <span>RAG Systems</span>
+                <span>Cognitive Architectures</span>
+              </div>
+            </div>
+
+            <!-- Machine Learning Card -->
+            <div class="p-top-feature__ai-card" data-line-reveal data-line-reveal-delay="0.2" data-cursor-hover>
+              <div class="p-top-feature__ai-badge">
+                <span class="p-top-feature__ai-dot" aria-hidden="true"></span>
+                <span>ML SPECIALIZATION</span>
+              </div>
+              <h3 class="p-top-feature__ai-title">Machine Learning</h3>
+              <p class="p-top-feature__ai-text">
+                Engineering predictive modeling algorithms, deep neural network training, computer vision pipelines,
+                anomaly detection, and end-to-end data intelligence architectures.
+              </p>
+              <div class="p-top-feature__ai-tags">
+                <span>Predictive Modeling</span>
+                <span>Deep Learning</span>
+                <span>Computer Vision</span>
+                <span>Data Pipelines</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Licenses & Certifications Showcase (.p-top-feature__cert-section) -->
+        <div class="p-top-feature__cert-section" id="certifications">
+          <div class="p-top-feature__ai-header" data-line-reveal>
+            <span class="c-eyebrow" style="color: var(--color-blue-1); margin: 0;">ACCREDITATIONS &amp; CREDENTIALS</span>
+            <div class="p-top-feature__ai-line" aria-hidden="true"></div>
+          </div>
+
+          <div style="margin-bottom: 2.75rem;" data-line-reveal data-line-reveal-delay="0.1">
+            <h3 class="c-section-heading" style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 0.5rem;">
+              Licenses &amp; Certifications
+            </h3>
+            <p style="font-size: 1rem; color: var(--color-text); opacity: 0.8; max-width: 680px; line-height: 1.6;">
+              Industry-accredited professional certifications across machine learning, artificial intelligence, cloud infrastructure, data analytics, and capital markets.
+            </p>
+          </div>
+
+          <div class="p-top-feature__cert-grid">
+            <!-- 1. Pasar Modal - BEI -->
+            <div class="p-top-feature__cert-card" data-line-reveal data-line-reveal-delay="0.1" data-cursor-hover>
+              <div class="p-top-feature__cert-top">
+                <div class="p-top-feature__cert-badge">
+                  <span class="c-project-modal__status-dot" aria-hidden="true"></span>
+                  <span>VERIFIED LICENSE</span>
+                </div>
+                <span class="p-top-feature__cert-date">Issued Jul 2026</span>
+              </div>
+
+              <div class="p-top-feature__cert-body">
+                <div class="p-top-feature__cert-issuer">
+                  <span class="p-top-feature__cert-org">PT Bursa Efek Indonesia (IDX)</span>
+                </div>
+                <h4 class="p-top-feature__cert-title">Sertifikat Sekolah Pasar Modal – Bursa Efek Indonesia</h4>
+                <p class="p-top-feature__cert-desc">
+                  Menyelesaikan Sekolah Pasar Modal yang diselenggarakan oleh PT Bursa Efek Indonesia (IDX) pada 16 Juli 2026, bertempat di Balikpapan. Program ini didukung oleh IDX, KSEI, IDClear, dan Indonesia SIPF sebagai bagian dari edukasi pasar modal dan investasi saham.
+                </p>
+              </div>
+
+              <div class="p-top-feature__cert-footer">
+                <div class="p-top-feature__ai-tags">
+                  <span>Pasar Modal</span>
+                  <span>Investasi Saham</span>
+                  <span>Financial Analysis</span>
+                  <span>Risk Management</span>
+                </div>
+                <a href="https://www.linkedin.com/in/m-ichsan-riantono-633311382/overlay/Certifications/1641979013/treasury/?profileId=ACoAAF5f30cBqU2zvuWpWCIYwO4dybBCO4-0VlQ" target="_blank" rel="noopener noreferrer" class="p-top-feature__cert-link" data-cursor-hover>
+                  <span>Show Credential</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2. Machine Learning - DeepLearning.AI -->
+            <div class="p-top-feature__cert-card" data-line-reveal data-line-reveal-delay="0.15" data-cursor-hover>
+              <div class="p-top-feature__cert-top">
+                <div class="p-top-feature__cert-badge">
+                  <span class="c-project-modal__status-dot" aria-hidden="true"></span>
+                  <span>VERIFIED CERTIFICATE</span>
+                </div>
+                <span class="p-top-feature__cert-date">Issued Feb 2026 · Expires Feb 2028</span>
+              </div>
+
+              <div class="p-top-feature__cert-body">
+                <div class="p-top-feature__cert-issuer">
+                  <span class="p-top-feature__cert-org">DeepLearning.AI &amp; Coursera</span>
+                  <span class="p-top-feature__cert-id">ID: FCYN18UPHSHI</span>
+                </div>
+                <h4 class="p-top-feature__cert-title">Machine Learning Specialization</h4>
+                <p class="p-top-feature__cert-desc">
+                  Comprehensive mastery of machine learning algorithms, deep neural network training, supervised learning (regression, classification), decision trees, unsupervised clustering, and reinforcement learning architectures certified by DeepLearning.AI.
+                </p>
+              </div>
+
+              <div class="p-top-feature__cert-footer">
+                <div class="p-top-feature__ai-tags">
+                  <span>Machine Learning</span>
+                  <span>Deep Learning</span>
+                  <span>Neural Networks</span>
+                  <span>Predictive Modeling</span>
+                </div>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/FCYN18UPHSHI" target="_blank" rel="noopener noreferrer" class="p-top-feature__cert-link" data-cursor-hover>
+                  <span>Show Credential</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 3. Google Analytics - Skillshop -->
+            <div class="p-top-feature__cert-card" data-line-reveal data-line-reveal-delay="0.2" data-cursor-hover>
+              <div class="p-top-feature__cert-top">
+                <div class="p-top-feature__cert-badge">
+                  <span class="c-project-modal__status-dot" aria-hidden="true"></span>
+                  <span>VERIFIED CERTIFICATE</span>
+                </div>
+                <span class="p-top-feature__cert-date">Issued Feb 2026 · Expires Feb 2027</span>
+              </div>
+
+              <div class="p-top-feature__cert-body">
+                <div class="p-top-feature__cert-issuer">
+                  <span class="p-top-feature__cert-org">Google Skillshop</span>
+                  <span class="p-top-feature__cert-id">ID: 175268264</span>
+                </div>
+                <h4 class="p-top-feature__cert-title">Google Analytics Certification</h4>
+                <p class="p-top-feature__cert-desc">
+                  Certified proficiency in Google Analytics 4 (GA4), demonstrating advanced data analytics capabilities, custom measurement implementation, event modeling, funnel explorations, and user acquisition insights.
+                </p>
+              </div>
+
+              <div class="p-top-feature__cert-footer">
+                <div class="p-top-feature__ai-tags">
+                  <span>Analisis Data</span>
+                  <span>Web Analytics</span>
+                  <span>Conversion Tracking</span>
+                  <span>Data Attribution</span>
+                </div>
+                <a href="https://skillshop.credential.net/1fe2026a-f3cf-4a8b-b3e6-d158532acc99" target="_blank" rel="noopener noreferrer" class="p-top-feature__cert-link" data-cursor-hover>
+                  <span>Show Credential</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 4. AWS Cloud & Gen AI - Dicoding -->
+            <div class="p-top-feature__cert-card" data-line-reveal data-line-reveal-delay="0.25" data-cursor-hover>
+              <div class="p-top-feature__cert-top">
+                <div class="p-top-feature__cert-badge">
+                  <span class="c-project-modal__status-dot" aria-hidden="true"></span>
+                  <span>VERIFIED CERTIFICATE</span>
+                </div>
+                <span class="p-top-feature__cert-date">Issued Sep 2025 · Expires Sep 2028</span>
+              </div>
+
+              <div class="p-top-feature__cert-body">
+                <div class="p-top-feature__cert-issuer">
+                  <span class="p-top-feature__cert-org">Dicoding Indonesia &amp; AWS</span>
+                  <span class="p-top-feature__cert-id">ID: MRZM6L8DLPYQ</span>
+                </div>
+                <h4 class="p-top-feature__cert-title">Belajar Dasar Cloud dan Gen AI di AWS</h4>
+                <p class="p-top-feature__cert-desc">
+                  Certified competency in Amazon Web Services (AWS) cloud architecture, core compute &amp; storage fundamentals, cloud security standards, and enterprise Generative AI engineering with Amazon Bedrock.
+                </p>
+              </div>
+
+              <div class="p-top-feature__cert-footer">
+                <div class="p-top-feature__ai-tags">
+                  <span>Cloud Computing</span>
+                  <span>AWS Infrastructure</span>
+                  <span>Generative AI</span>
+                  <span>Amazon Bedrock</span>
+                </div>
+                <a href="https://www.dicoding.com/certificates/MRZM6L8DLPYQ" target="_blank" rel="noopener noreferrer" class="p-top-feature__cert-link" data-cursor-hover>
+                  <span>Show Credential</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Clients & Tools Marquee (.p-top-client) -->
+    <section class="p-top-client" data-marquee-scroll-scrub>
+      <div class="c-marquee">
+        <div class="c-marquee__inner">
+          <span class="c-marquee__item">VANILLA ESM</span>
+          <span class="c-marquee__item">GSAP 3</span>
+          <span class="c-marquee__item">LENIS SCROLL</span>
+          <span class="c-marquee__item">THREE.JS</span>
+          <span class="c-marquee__item">VITE BUNDLER</span>
+          <span class="c-marquee__item">ACCESSIBLE WCAG</span>
+          <span class="c-marquee__item">VANILLA ESM</span>
+          <span class="c-marquee__item">GSAP 3</span>
+          <span class="c-marquee__item">LENIS SCROLL</span>
+          <span class="c-marquee__item">THREE.JS</span>
+          <span class="c-marquee__item">VITE BUNDLER</span>
+          <span class="c-marquee__item">ACCESSIBLE WCAG</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Projects Section (.p-top-case.c-bg-white) -->
+    <section class="p-top-case c-bg-white" id="projects" data-section-parallax data-section-parallax-factor="0.8">
+      <div id="portfolio" style="position: absolute; top: 0; left: 0; pointer-events: none;" aria-hidden="true"></div>
+      <div class="l-container">
+        <div style="margin-bottom: 2.5rem;">
+          <span class="c-eyebrow" data-line-reveal>CURATED PORTFOLIO</span>
+          <h2 class="c-section-heading" style="margin-bottom: 0;" data-line-reveal data-line-reveal-delay="0.1">
+            SELECTED WORK</h2>
+        </div>
+
+        <div class="splide" aria-label="Selected Projects Carousel">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <!-- Project 1: Kaiseki -->
+              <li class="splide__slide">
+                <a href="https://website-food-kaiseki.vercel.app/" class="c-project-card"
+                  data-project-modal-trigger="kaiseki" data-cursor-hover>
+                  <div class="c-project-card__thumb-wrap" data-image-reveal>
+                    <video class="c-project-card__thumb" autoplay loop muted playsinline preload="metadata" poster="/img/projects/kaiseki.png">
+                      <source src="/video/kaiseki.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="c-project-card__meta">
+                    <span>Web Engineering / Luxury Dining</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="c-project-card__title">Kaiseki | Modern Asian Luxury Dining</h3>
+                  <p class="c-project-card__summary">High-end digital culinary showcase with cinematic GSAP
+                    storytelling, Next.js 15 App Router, and fluid kinetic typography.</p>
+                </a>
+              </li>
+
+              <!-- Project 2: Perfume -->
+              <li class="splide__slide">
+                <a href="https://store-perfume.vercel.app/" class="c-project-card" data-project-modal-trigger="perfume"
+                  data-cursor-hover>
+                  <div class="c-project-card__thumb-wrap" data-image-reveal data-image-reveal-stagger="0.15">
+                    <video class="c-project-card__thumb" autoplay loop muted playsinline preload="metadata" poster="/img/projects/perfume.png">
+                      <source src="/video/store-perfume.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="c-project-card__meta">
+                    <span>Luxury E-Commerce / Creative 3D Web</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="c-project-card__title">PERFUME | Essence of Timeless Seduction</h3>
+                  <p class="c-project-card__summary">High-end luxury fragrance digital flagship featuring interactive 3D
+                    WebGL experiences, frame-by-frame canvas scroll sequences, and avant-garde editorial typography.</p>
+                </a>
+              </li>
+
+              <!-- Project 3 -->
+              <li class="splide__slide">
+                <a href="https://example.com/project-3" target="_blank" rel="noopener noreferrer" class="c-project-card"
+                  data-cursor-hover>
+                  <div class="c-project-card__thumb-wrap" data-image-reveal data-image-reveal-stagger="0.3">
+                    <img src="/img/projects/project-3.webp" alt="Monolith Architectural Studio preview"
+                      class="c-project-card__thumb" width="800" height="500" loading="lazy">
+                  </div>
+                  <div class="c-project-card__meta">
+                    <span>Branding / Web Experience</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="c-project-card__title">Monolith Architectural Studio</h3>
+                  <p class="c-project-card__summary">Bespoke digital presence for a minimalist architectural studio,
+                    featuring fluid typography and mask-slide transitions.</p>
+                </a>
+              </li>
+
+              <!-- Project 4 -->
+              <li class="splide__slide">
+                <a href="https://example.com/project-4" target="_blank" rel="noopener noreferrer" class="c-project-card"
+                  data-cursor-hover>
+                  <div class="c-project-card__thumb-wrap" data-image-reveal data-image-reveal-stagger="0.15">
+                    <img src="/img/projects/project-4.webp" alt="Vectra Autonomous Fleet preview"
+                      class="c-project-card__thumb" width="800" height="500" loading="lazy">
+                  </div>
+                  <div class="c-project-card__meta">
+                    <span>Dashboard / UI Engineering</span>
+                    <span>2024</span>
+                  </div>
+                  <h3 class="c-project-card__title">Vectra Autonomous Fleet</h3>
+                  <p class="c-project-card__summary">Telemetry monitoring dashboard with real-time stream simulation and
+                    accessible dark/light presentation modes.</p>
+                </a>
+              </li>
+
+              <!-- Project 5 -->
+              <li class="splide__slide">
+                <a href="https://example.com/project-5" target="_blank" rel="noopener noreferrer" class="c-project-card"
+                  data-cursor-hover>
+                  <div class="c-project-card__thumb-wrap" data-image-reveal data-image-reveal-stagger="0.3">
+                    <img src="/img/projects/project-5.webp" alt="Chrono Media Collective preview"
+                      class="c-project-card__thumb" width="800" height="500" loading="lazy">
+                  </div>
+                  <div class="c-project-card__meta">
+                    <span>Motion / Design System</span>
+                    <span>2024</span>
+                  </div>
+                  <h3 class="c-project-card__title">Chrono Media Collective</h3>
+                  <p class="c-project-card__summary">Multi-brand dynamic editorial system with localized typographic
+                    scales and smooth Lenis-driven scrollytelling.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Splide Navigation Controls Underneath Carousel -->
+          <div class="p-top-case__controls">
+            <div class="p-top-case__controls-meta">
+              <span class="p-top-case__controls-dot" aria-hidden="true"></span>
+              <span class="p-top-case__controls-text">EXPLORE SELECTED WORKS</span>
+            </div>
+            <div class="splide__arrows splide__arrows--ltr">
+              <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide" data-cursor-hover>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="20" height="20" focusable="false" aria-hidden="true">
+                  <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
+                </svg>
+              </button>
+              <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide" data-cursor-hover>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="20" height="20" focusable="false" aria-hidden="true">
+                  <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CTA / Recruitment (.l-footer__recruit) -->
+    <section class="l-footer__recruit" id="contact">
+      <div class="l-container">
+        <span class="c-eyebrow" data-line-reveal>START A CONVERSATION</span>
+        <h2 class="l-footer__recruit-headline" data-line-reveal data-line-reveal-delay="0.1">
+          HAVE A PROJECT IN MIND?<br>LET'S BUILD TOGETHER.
+        </h2>
+        <a href="mailto:hello@example.com" class="c-btn-arrow" data-cursor-hover>
+          <span>INITIATE INQUIRY</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. Footer (footer.l-footer) -->
+  <footer class="l-footer">
+    <div class="l-container">
+      <div class="l-footer__inner">
+        <div>
+          <span
+            style="font-family: var(--font-ttl); font-size: 1.25rem; font-weight: 700; display: block; margin-bottom: 1rem;">
+            PORTFOLIO / STUDIO
+          </span>
+          <p style="max-width: 360px; color: var(--color-beige-3); font-size: 0.9rem;">
+            Autonomous creative development, precision engineering, and sensory interaction design.
+          </p>
+        </div>
+
+        <nav class="l-footer__nav" aria-label="Footer Navigation">
+          <a href="#about" class="l-footer__nav-link">About</a>
+          <a href="#services" class="l-footer__nav-link">Experience</a>
+          <a href="#features" class="l-footer__nav-link">Services</a>
+          <a href="#certifications" class="l-footer__nav-link">Certifications</a>
+          <a href="#projects" class="l-footer__nav-link">Projects</a>
+          <a href="#contact" class="l-footer__nav-link">Contact</a>
+        </nav>
+
+        <div class="l-footer__social">
+          <a href="https://github.com/itsan2" target="_blank" rel="noopener noreferrer"
+            class="l-footer__social-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/m-ichsan-riantono-633311382/" target="_blank" rel="noopener noreferrer"
+            class="l-footer__social-link">LinkedIn</a>
+          <a href="https://www.instagram.com/itsan2" target="_blank" rel="noopener noreferrer"
+            class="l-footer__social-link">Instagram</a>
+        </div>
+      </div>
+
+      <div class="l-footer__bottom">
+        <span>&copy; 2026 Creative Developer Portfolio. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Phased Execution (ARCHITECTURE.md §2) -->
+</body>
+
+</html>
