@@ -1,7 +1,4 @@
 # Creative Developer & Designer Portfolio
-
-> Implementation inspired by the visual direction, layout hierarchy, motion engineering, and interaction patterns of `bright-avenue.jp`.
-
 ---
 
 ## 1. Project Summary
