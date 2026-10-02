@@ -5,7 +5,7 @@
 ---
 
 ## 1. Project Summary
-Proyek ini adalah implementasi portofolio personal mutakhir yang dibangun dengan fondasi vanilla ESM + Vite, mengadopsi prinsip desain visual premium dan koreografi animasi presisi tinggi dari analisis situs `bright-avenue.jp`. Seluruh konten merupakan portofolio personal (karya kreatif, rekayasa web, motion, dan interaksi) tanpa menyertakan aset atau merek proprietary referensi.
+Proyek ini adalah implementasi portofolio personal yang dibangun dengan fondasi vanilla ESM + Vite, mengadopsi prinsip desain visual premium dan koreografi animasi presisi seluruh konten merupakan portofolio personal (karya kreatif, rekayasa web, motion, dan interaksi) tanpa menyertakan aset atau merek proprietary referensi.
 
 ## 2. Goal
 - Menghadirkan pengalaman web portfolio kelas dunia yang memukau (*wow factor*), berkinerja tinggi, dan interaktif.
@@ -63,9 +63,6 @@ Proyek ini adalah implementasi portofolio personal mutakhir yang dibangun dengan
 ## 6. Setup & Installation
 Pastikan Node.js (>= 18) telah terpasang di sistem.
 ```bash
-# Buka direktori proyek
-cd "d:\laragon\www\projects\port baru 3"
-
 # Install dependensi
 npm install
 ```
@@ -107,42 +104,26 @@ Seluruh data proyek dikelola secara terstruktur melalui file `src/content/projec
 - **Ultra-wide constraints:** Pembatasan lebar maksimum pada kontainer `max-width: 1600px`.
 - **Device Capabilities:** Efek hover mikro dan custom cursor dikarantina menggunakan `@media (hover: hover) and (pointer: fine)`.
 
-## 13. Current Phase
-- **Fase Aktif:** **Phase 7 — QA / Acceptance / Release Documentation** (SELESAI).
-- **Status Rilis:** Proyek siap dideploy dan dijalankan penuh secara lokal maupun di server produksi.
-
-## 14. Completed Checklist
-- [x] Phase 0 — Project reconnaissance & inspeksi repository awal.
-- [x] Phase 0 — Kanonikalisasi dan sinkronisasi seluruh dokumentasi (`README.md`, `AGENTS.md`, `ARCHITECTURE.md`, `DESIGN.md`, `MOTION.md`, `CONTENT.md`, `ROADMAP.md`).
-- [x] Phase 0 — Pembuatan file log progres `AGENT_PROGRESS.md`.
-- [x] Phase 1 — Scaffold project Vite Vanilla ESM & setup dependencies (`gsap`, `lenis`, `@splidejs/splide`).
-- [x] Phase 2 — Desain sistem token CSS & static semantic markup 11 section dengan `<noscript>`.
-- [x] Phase 3 — Core motion, loader state machine, dan Lenis scroll integration.
-- [x] Phase 4 — Signature effects (parallax, marquee, horizontal scrub, cursor, text fill reveal).
-- [x] Phase 5 — Optional 3D Tier-2 WebGL plane reveal dengan lazy-loaded `three-vendor`.
-- [x] Phase 6 — Injeksi konten JSON, optimasi aset WebP/AVIF (CLS 0), dan SEO meta + JSON-LD.
-- [x] Phase 7 — QA komprehensif, cross-browser verification, preview testing, dan rilis.
-
-## 15. Known Limitations
+## 13. Known Limitations
 - Modul Three.js WebGL sengaja diatur sebagai Tier-2 dengan pemuatan malas (`dynamic import`), sehingga jika perangkat klien tidak mendukung WebGL atau mengaktifkan reduced-motion, shader tidak dijalankan dan digantikan oleh poster visual statis.
 
-## 16. Verification Status
+## 14. Verification Status
 - **Status Build (`npm run build`):** SUKSES (Dist generated: `dist/index.html` 23.02 kB, `dist/assets/main-BfKfoI_x.css` 25.37 kB, `dist/assets/main-BgQvlrsx.js` 177.18 kB, `dist/assets/three-vendor-8XBNpc-W.js` 512.43 kB).
 - **Status Dev Server (`npm run dev`):** SUKSES (Berjalan dan merespons HTTP 200 di port 5173).
 - **Status Preview Server (`npm run preview`):** SUKSES (Merespons HTTP 200 untuk HTML dan aset statis di port 4173).
 - **Status Asset Endpoint:** 100% dari seluruh stylesheet, script, font, dan gambar WebP mengembalikan kode status HTTP 200 tanpa satupun 404.
 - **Status Runtime Console:** 0 error, 0 warning (Three.js deprecation resolved, clean CDP live session).
 
-## 17. Deployment Notes
+## 15. Deployment Notes
 - Build statis dihasilkan ke folder `dist/` melalui perintah `npm run build`.
 - Siap dideploy langsung ke provider hosting statis seperti Vercel, Netlify, Cloudflare Pages, GitHub Pages, atau server Apache/Nginx.
 
-## 18. Troubleshooting
+## 16. Troubleshooting
 - **Port 5173 terpakai:** Vite otomatis mengikat ke port berikutnya (misal 5174). Anda dapat menentukan port spesifik via `npm run dev -- --port <NOMOR_PORT>`.
 - **Animasi kursor tidak muncul:** Kursor khusus secara sengaja hanya aktif pada perangkat desktop dengan tetikus (`(hover: hover) and (pointer: fine)`). Pada layar sentuh, kursor standar sistem operasi digunakan.
 - **Preloader terlewati secara instan:** Jika pengguna menavigasi via tombol Back/Forward browser, `loading.js` mendeteksi `back_forward` navigation dan secara cerdas melewati animasi pembuka untuk kenyamanan navigasi.
 
-## 19. Contribution & AI Agent Working Rules
+## 17. Contribution & AI Agent Working Rules
 - **Anti-Hallucination:** Jangan mengklaim pengujian yang belum dijalankan. Seluruh klaim harus disertai bukti eksekusi perintah terminal atau inspeksi berkas nyata.
 - **Hook Protocol:** Gunakan atribut `data-*` sebagai API animasi. Dilarang menargetkan elemen animasi via class acak yang di-hardcode dalam JavaScript.
 - **Design Token Strictness:** Seluruh warna, ukuran font, dan margin wajib merujuk ke token `:root` di `DESIGN.md`.
